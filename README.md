@@ -28,3 +28,17 @@ Here are a few example tasks and projects you can ask Jules to build for you to 
 
 ---
 *Bonus: Check out the included `server` and `client` directories to see a full-stack Student Dashboard built by Jules, which even includes web-scraping university course data!*
+
+### How to Run the Student Dashboard Exemplar
+
+The Student Dashboard requires the backend server to be running so it can scrape syllabus data.
+
+**1. Using the automated script:**
+Simply run `./start.sh` in your terminal from the root directory. This will install all dependencies, start the backend server, and tell you how to open the frontend.
+
+**2. Manual Setup:**
+If you prefer to start it manually:
+- Open your terminal and navigate to the `server` directory: `cd server`
+- Install dependencies: `npm install`
+- Start the server: `node index.js`
+- Keep that terminal open. Then, open `client/index.html` in your web browser.
