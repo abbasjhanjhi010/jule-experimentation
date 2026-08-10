@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>My Student Dashboard</h1>
+        <div class="search-container">
+            <input type="text" id="programmeSearch" placeholder="Enter Sunway University Bachelor's Degree Name (e.g., Computer Science)">
+            <button id="searchBtn">Fetch Syllabus</button>
+        </div>
+    </header>
+
+    <main class="dashboard">
+        <!-- Student Tracker (Tasks/Assignments) -->
+        <section class="widget" id="student-tracker">
+            <h2>Student Tracker (Assignments)</h2>
+            <div class="input-group">
+                <input type="text" id="taskInput" placeholder="New assignment...">
+                <button onclick="app.addTask()">Add</button>
+            </div>
+            <ul id="taskList"></ul>
+        </section>
+
+        <!-- Exam Due Dates -->
+        <section class="widget" id="exam-tracker">
+            <h2>Exam Due Dates</h2>
+            <div class="input-group">
+                <input type="text" id="examInput" placeholder="Exam name...">
+                <input type="date" id="examDate">
+                <button onclick="app.addExam()">Add</button>
+            </div>
+            <ul id="examList"></ul>
+        </section>
+
+        <!-- Meeting Trackers -->
+        <section class="widget" id="meeting-tracker">
+            <h2>Meeting Tracker (Groups/Advisors)</h2>
+            <div class="input-group">
+                <input type="text" id="meetingInput" placeholder="Meeting with...">
+                <input type="datetime-local" id="meetingDate">
+                <button onclick="app.addMeeting()">Add</button>
+            </div>
+            <ul id="meetingList"></ul>
+        </section>
+
+        <!-- Subject Tracker -->
+        <section class="widget full-width" id="subject-tracker">
+            <h2>Subject Tracker & Syllabus</h2>
+            <div id="loadingSyllabus" style="display: none;">Fetching subjects from Sunway University...</div>
+            <div id="syllabusContainer">
+                <p>Enter your degree name above to fetch your syllabus.</p>
+            </div>
+        </section>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
